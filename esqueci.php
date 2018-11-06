@@ -14,7 +14,7 @@ $login = new Login();
     <div class="container-fluid" style="margin-top:20vh;">
         <div class="container caixa-login">
             <div class="d-flex justify-content-center align-items-center" style="margin-top:30px;margin-bottom:15px;">
-                <h4>Redefinir Senha</h4>
+                <h4>Enviar Redefinição</h4>
             </div>
             <div class="d-flex justify-content-center align-items-center">
                 <form class="form-group formulario" method="POST" action="">

@@ -88,6 +88,21 @@ class Peso extends Conexao {
     }
 
 
+    public function selecionarVariosPeitos($id_usuario){
+        $id_usuario = $_SESSION['login'];
+
+        $peitos = "SELECT * FROM peitos WHERE id_usuario = :id_usuario";
+        $peitos = $this->pdo->prepare($peitos);
+        $peitos->execute([':id_usuario'=>$id_usuario]);
+           
+            if($peitos->rowCount() > 0) {
+                return $peitos->fetchAll();
+            } else {
+                return array();
+            } 
+    }
+
+
 
     public function treinoTriceps(){
         if(empty($_SESSION['login'])){
